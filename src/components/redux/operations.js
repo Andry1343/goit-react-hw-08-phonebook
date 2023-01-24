@@ -1,8 +1,7 @@
 import axios from 'axios';
 import { createAsyncThunk } from '@reduxjs/toolkit';
 
-/* axios.defaults.baseURL = 'https://63c1dd5de3abfa59bda5a97b.mockapi.io'; */
-axios.defaults.baseURL = 'https://goit-task-manager.herokuapp.com/';
+axios.defaults.baseURL = 'https://connections-api.herokuapp.com';
 
 export const fetchContacts = createAsyncThunk(
   'contacts/fetchAll',
@@ -125,7 +124,7 @@ export const refreshUser = createAsyncThunk(
     try {
       // If there is a token, add it to the HTTP header and perform the request
       setAuthHeader(persistedToken);
-      const res = await axios.get('/users/me');
+      const res = await axios.get('/users');
       return res.data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);

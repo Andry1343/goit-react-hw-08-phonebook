@@ -1,10 +1,8 @@
-import { ContactForm } from '../components/form/Form.jsx';
-import { Filter } from '../components/filter/Filter.jsx';
-import { ContactList } from '../components/contactList/ContactList.jsx';
-import { fetchContacts } from './redux/operations.js';
+
+
 import { useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { selectContacts } from './redux/selectors';
+import { useDispatch } from 'react-redux';
+
 import style from './form/Form.module.css';
 
 import { Routes, Route } from 'react-router-dom';
@@ -14,18 +12,22 @@ import RegisterPage from './pages/Register.js';
 import { RestrictedRoute } from './RestrictedRoute.js';
 import LoginPage from './pages/Login.js';
 import { PrivateRoute } from './PrivateRoute.js';
+import { ContactsPage } from './pages/ContactPage.js';
+import { useAuth } from 'hooks/useAuth';
+import { refreshUser } from './redux/operations';
 
 
 export const App = () => {
   const dispatch = useDispatch();
-
-  const contacts = useSelector(selectContacts);
+  const { isRefreshing } = useAuth();
 
   useEffect(() => {
-    dispatch(fetchContacts());
+    dispatch(refreshUser());
   }, [dispatch]);
 
-  return (
+  return isRefreshing ? (
+    <b>Refreshing user...</b>
+  ) : (
     <div className={style.form}>
       <Routes>
       <Route path="/" element={<Layout />}>
@@ -33,31 +35,24 @@ export const App = () => {
         <Route
           path="/register"
           element={
-            <RestrictedRoute redirectTo="/tasks" component={<RegisterPage />} />
+            <RestrictedRoute redirectTo="/contacts" component={<RegisterPage />} />
           }
         />
         <Route
           path="/login"
           element={
-            <RestrictedRoute redirectTo="/tasks" component={<LoginPage />} />
+            <RestrictedRoute redirectTo="/contacts" component={<LoginPage />} />
           }
         />
         <Route
-          path="/tasks"
+          path="/contacts"
           element={
-            <PrivateRoute redirectTo="/login" component={{/* <TasksPage /> */}} />
+            <PrivateRoute redirectTo="/login" component={<ContactsPage/>} />
           }
         />
       </Route>
-    </Routes>
-      
-      <div className={style.form_name_number_filter}>
-        <h1>Phonebook</h1>
-        <ContactForm></ContactForm>
-        {contacts.length !== 0 && <Filter />}
-        {contacts.length !== 0 && <h2>Contacs</h2>}
-      </div>
-      {contacts.length !== 0 && <ContactList />}
+    </Routes> 
     </div>
-  );
+  )
+  
 };

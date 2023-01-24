@@ -11,8 +11,8 @@ export const Navigation = () => {
         Home
       </NavLink>
       {isLoggedIn && (
-        <NavLink className={style.link} to="/tasks">
-          Tasks
+        <NavLink className={style.link} to="/contacts">
+          Contacs
         </NavLink>
       )}
     </nav>
