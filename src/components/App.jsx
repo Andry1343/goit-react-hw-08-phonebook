@@ -1,5 +1,3 @@
-
-
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 
@@ -16,7 +14,6 @@ import { ContactsPage } from './pages/ContactPage.js';
 import { useAuth } from 'hooks/useAuth';
 import { refreshUser } from './redux/operations';
 
-
 export const App = () => {
   const dispatch = useDispatch();
   const { isRefreshing } = useAuth();
@@ -30,29 +27,34 @@ export const App = () => {
   ) : (
     <div className={style.form}>
       <Routes>
-      <Route path="/" element={<Layout />}>
-        <Route index element={<HomePage />} />
-        <Route
-          path="/register"
-          element={
-            <RestrictedRoute redirectTo="/contacts" component={<RegisterPage />} />
-          }
-        />
-        <Route
-          path="/login"
-          element={
-            <RestrictedRoute redirectTo="/contacts" component={<LoginPage />} />
-          }
-        />
-        <Route
-          path="/contacts"
-          element={
-            <PrivateRoute redirectTo="/login" component={<ContactsPage/>} />
-          }
-        />
-      </Route>
-    </Routes> 
+        <Route path="/" element={<Layout />}>
+          <Route index element={<HomePage />} />
+          <Route
+            path="/register"
+            element={
+              <RestrictedRoute
+                redirectTo="/contacts"
+                component={<RegisterPage />}
+              />
+            }
+          />
+          <Route
+            path="/login"
+            element={
+              <RestrictedRoute
+                redirectTo="/contacts"
+                component={<LoginPage />}
+              />
+            }
+          />
+          <Route
+            path="/contacts"
+            element={
+              <PrivateRoute redirectTo="/login" component={<ContactsPage />} />
+            }
+          />
+        </Route>
+      </Routes>
     </div>
-  )
-  
+  );
 };
