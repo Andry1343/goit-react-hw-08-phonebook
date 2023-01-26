@@ -1,7 +1,7 @@
 import { useDispatch } from 'react-redux';
 import { setFilter } from 'components/redux/filterSlice';
 /* import { nanoid } from 'nanoid'; */
-/* import style from '../filter/Filter.module.css'; */
+import style from '../filter/Filter.module.css';
 
 import TextField from '@mui/material/TextField';
 /* import Button from '@mui/material/Button'; */
@@ -19,7 +19,7 @@ export const Filter = () => {
       <TextField id="outlined-basic" label="Find contacts by name" variant="outlined" 
         type="text"
         onChange={e => dispatch(setFilter(e.currentTarget.value))}
-        /* id={nanoid()} */
+        className = {style.filter_imput}
          />
     </div>
   );

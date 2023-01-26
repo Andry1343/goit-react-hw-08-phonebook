@@ -19,10 +19,10 @@ export const ContactsPage = () => {
 
   return (
     <div className={style.form_name_number_filter}>
-      <h1>Phonebook</h1>
+      <h2>Phonebook</h2>
       <ContactForm></ContactForm>
       {contacts.length !== 0 && <Filter />}
-      {contacts.length !== 0 && <h2>Contacs</h2>}
+      {contacts.length !== 0 && <h3>Contacs</h3>}
       {contacts.length !== 0 && <ContactList />}
     </div>
   );

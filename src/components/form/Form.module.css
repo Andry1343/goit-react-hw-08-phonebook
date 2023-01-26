@@ -1,5 +1,5 @@
 .form {
-  max-width: 520px;
+  max-width: 490px;
   margin-top: 15px;
   margin-bottom: 15px;
   margin-left: auto;
@@ -11,9 +11,9 @@
     rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 }
 
-.form_name_number_filter {
+/* .form_name_number_filter {
   text-align: center;
-}
+} */
 
 /* .form_btn {
   margin-left: auto;

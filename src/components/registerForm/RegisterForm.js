@@ -36,7 +36,7 @@ export const RegisterForm = () => {
       <label className={style.label}>
         {/* Password */}
         {/* <input placeholder="password" type="password" name="password" /> */}
-        <TextField id="outlined-basic" label="password" variant="outlined" type="password" name="password"  />
+        <TextField id="outlined-basic" label="Password" variant="outlined" type="password" name="password"  />
       </label>
       {/* <button type="submit">Register</button> */}
       <Button type="submit" variant="outlined">Register</Button>

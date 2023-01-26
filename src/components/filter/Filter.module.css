@@ -2,3 +2,10 @@
     font-size: 14px;
     font-weight: bold;
 }
+
+  .filter_imput {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+    width: 320px;
+  }
