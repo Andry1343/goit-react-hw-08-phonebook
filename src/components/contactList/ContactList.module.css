@@ -17,6 +17,16 @@
   margin-right: 5px;
 }
 
+
+.form_btn_del:hover {
+  background-color: #f7fafa;
+  border-color: #008296;
+}
+.form_btn_del:focus {
+  box-shadow: rgba(213, 217, 217, 0.5) 0 2px 5px 0;
+  outline: 0;
+}
+
 .contact_position{
   text-align: left;
 }

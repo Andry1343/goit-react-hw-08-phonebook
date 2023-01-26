@@ -22,16 +22,11 @@ export const LoginForm = () => {
   return (
     <form className={style.form} onSubmit={handleSubmit} autoComplete="off">
       <label className={style.label}>
-        {/* Email */}
-        <TextField id="outlined-basic" label="Email" variant="outlined" type="email" name="email"  />
-        {/* <input placeholder="Email" type="email" name="email" /> */}
+        <TextField id="outlined-basic-email" label="Email" variant="outlined" type="email" name="email"  />
       </label>
       <label className={style.label}>
-       {/*  Password */}
-        <TextField id="outlined-basic" label="Password" variant="outlined" type="password" name="password"  />
-        {/* <input placeholder="Password" type="password" name="password" /> */}
+        <TextField id="outlined-basic-password" label="Password" variant="outlined" type="password" name="password"  />
       </label>
-      {/* <button type="submit">Log In</button> */}
       <Button type="submit" variant="outlined">Log In</Button>
     </form>
   );
