@@ -15,7 +15,7 @@
   text-align: center;
 }
 
-.form_btn {
+/* .form_btn {
   margin-left: auto;
   margin-right: auto;
   margin-top: 15px;
@@ -43,4 +43,13 @@ button:hover {
 button:focus {
   box-shadow: rgba(213, 217, 217, 0.5) 0 2px 5px 0;
   outline: 0;
+} */
+
+.label {
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
 }
+
+
