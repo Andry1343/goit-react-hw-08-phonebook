@@ -1,7 +1,8 @@
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 
-import style from './form/Form.module.css';
+import { Container } from './App.style';
+
 
 import { Routes, Route } from 'react-router-dom';
 import { Layout } from './Layout.js';
@@ -14,6 +15,8 @@ import { ContactsPage } from './pages/ContactPage.js';
 import { useAuth } from 'hooks/useAuth';
 import { refreshUser } from './redux/operations';
 
+
+
 export const App = () => {
   const dispatch = useDispatch();
   const { isRefreshing } = useAuth();
@@ -25,7 +28,7 @@ export const App = () => {
   return isRefreshing ? (
     <b>Refreshing user...</b>
   ) : (
-    <div className={style.form}>
+    <Container>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<HomePage />} />
@@ -55,6 +58,6 @@ export const App = () => {
           />
         </Route>
       </Routes>
-    </div>
+    </Container>
   );
 };

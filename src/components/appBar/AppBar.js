@@ -2,15 +2,15 @@ import { Navigation } from '../navigation/Navigation';
 import { UserMenu } from '../userMenu/UserMenu';
 import { AuthNav } from '../authNav/AuthNav';
 import { useAuth } from 'hooks/useAuth';
-import style from '../appBar/AppBar.module.css';
+import { Header } from './AppBar.style';
 
 export const AppBar = () => {
   const { isLoggedIn } = useAuth();
 
   return (
-    <header className={style.header}>
+    <Header>
       <Navigation />
       {isLoggedIn ? <UserMenu /> : <AuthNav />}
-    </header>
+    </Header>
   );
 };
