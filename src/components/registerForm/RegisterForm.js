@@ -22,7 +22,7 @@ export const RegisterForm = () => {
   };
 
   return (
-    <form className={style.form} onSubmit={handleSubmit} autoComplete="off">
+    <form onSubmit={handleSubmit} autoComplete="off">
       <label className={style.label}>
         <TextField id="outlined-basic-name" label="Username" variant="outlined" type="text" name="name"  />
       </label>

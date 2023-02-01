@@ -20,7 +20,7 @@ export const LoginForm = () => {
   };
 
   return (
-    <form className={style.form} onSubmit={handleSubmit} autoComplete="off">
+    <form onSubmit={handleSubmit} autoComplete="off">
       <label className={style.label}>
         <TextField id="outlined-basic-email" label="Email" variant="outlined" type="email" name="email"  />
       </label>

@@ -15,7 +15,7 @@ export const ContactItem = ({ contact: { name, number, id } }) => {
           className={style.form_btn_del}
           onClick={handleDelete}
         >
-         <MdClose style={{width: '15px', color: 'red'}}/>
+         <MdClose style={{ color: 'red'}} size={17}/>
         </button>
         {name} : {number}
       </p>

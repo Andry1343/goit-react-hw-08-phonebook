@@ -12,7 +12,7 @@ const styles = {
   export default function Home() {
     return (
       <div style={styles.container}>
-        <FcMultipleSmartphones size={140} ></FcMultipleSmartphones>
+        <FcMultipleSmartphones size={280} ></FcMultipleSmartphones>
       </div>
     );
   }
