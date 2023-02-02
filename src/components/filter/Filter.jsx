@@ -1,8 +1,6 @@
 import { useDispatch } from 'react-redux';
 import { setFilter } from 'components/redux/filterSlice';
 import TextField from '@mui/material/TextField';
-import style from '../filter/Filter.module.css';
-
 
 export const Filter = () => {
   const dispatch = useDispatch();
@@ -11,8 +9,7 @@ export const Filter = () => {
       <TextField id="outlined-basic" label="Find contacts by name" variant="outlined" 
         type="text"
         onChange={e => dispatch(setFilter(e.currentTarget.value))}
-        className = {style.filter_imput}
-         />
+        style={{ marginBottom: "16px", width: "100%" }}/>
     </div>
   );
 };

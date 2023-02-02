@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const ButtonDel = styled.button`
-background-color: #fff;
+    background-color: #fff;
     border: 1px solid #d5d9d9;
     border-radius: 8px;
     box-shadow: rgba(213, 217, 217, 0.5) 0 2px 5px 0;
@@ -18,11 +18,11 @@ background-color: #fff;
     touch-action: manipulation;
     margin-right: 5px;
   
-  &.hover {
+  &:hover {
     background-color: #f7fafa;
     border-color: #008296;
   }
-  &.focus {
+  &:focus {
     box-shadow: rgba(213, 217, 217, 0.5) 0 2px 5px 0;
     outline: 0;
   }

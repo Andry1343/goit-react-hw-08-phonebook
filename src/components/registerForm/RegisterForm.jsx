@@ -2,7 +2,7 @@ import { useDispatch } from 'react-redux';
 import { register } from '../redux/operations';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
-import style from '../registerForm/RegisterForm.module.css';
+import { LableRegisterForm } from './Register.style.form';
 
 
 export const RegisterForm = () => {
@@ -23,6 +23,23 @@ export const RegisterForm = () => {
 
   return (
     <form onSubmit={handleSubmit} autoComplete="off">
+      <LableRegisterForm>
+      <TextField id="outlined-basic-name" label="Username" variant="outlined" type="text" name="name"  />
+      </LableRegisterForm>
+      <LableRegisterForm>
+      <TextField id="outlined-basic-email" label="Email" variant="outlined" type="email" name="email"  />
+      </LableRegisterForm>
+      <LableRegisterForm>
+      <TextField id="outlined-basic-password" label="Password" variant="outlined" type="password" name="password"  />
+      </LableRegisterForm>
+      <Button type="submit" variant="outlined">Register</Button>
+    </form>
+
+  );
+};
+
+
+/* <form onSubmit={handleSubmit} autoComplete="off">
       <label className={style.label}>
         <TextField id="outlined-basic-name" label="Username" variant="outlined" type="text" name="name"  />
       </label>
@@ -33,7 +50,4 @@ export const RegisterForm = () => {
         <TextField id="outlined-basic-password" label="Password" variant="outlined" type="password" name="password"  />
       </label>
       <Button type="submit" variant="outlined">Register</Button>
-    </form>
-
-  );
-};
+    </form> */

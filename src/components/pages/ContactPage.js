@@ -7,7 +7,6 @@ import { useSelector } from 'react-redux';
 import { ContactForm } from '../form/Form';
 import { Filter } from '../filter/Filter';
 import { ContactList } from '../contactList/ContactList';
-import style from '../form/Form.module.css';
 
 export const ContactsPage = () => {
   const dispatch = useDispatch();
@@ -18,7 +17,7 @@ export const ContactsPage = () => {
   }, [dispatch]);
 
   return (
-    <div className={style.form_name_number_filter}>
+    <div>
       <h2>Phonebook</h2>
       <ContactForm></ContactForm>
       {contacts.length !== 0 && <Filter />}
