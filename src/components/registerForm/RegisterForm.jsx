@@ -29,6 +29,7 @@ export const RegisterForm = () => {
           variant="outlined"
           type="text"
           name="name"
+          required
         />
       </LableRegisterForm>
       <LableRegisterForm>
@@ -38,6 +39,7 @@ export const RegisterForm = () => {
           variant="outlined"
           type="email"
           name="email"
+          required
         />
       </LableRegisterForm>
       <LableRegisterForm>
@@ -47,6 +49,7 @@ export const RegisterForm = () => {
           variant="outlined"
           type="password"
           name="password"
+          required
         />
       </LableRegisterForm>
       <Button type="submit" variant="outlined">

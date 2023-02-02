@@ -16,6 +16,7 @@ export const UserMenu = () => {
         type="button"
         onClick={() => dispatch(logOut())}
         variant="outlined"
+        size='small'
       >
         Logout
       </Button>
