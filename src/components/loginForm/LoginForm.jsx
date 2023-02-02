@@ -22,12 +22,26 @@ export const LoginForm = () => {
   return (
     <form onSubmit={handleSubmit} autoComplete="off">
       <LableLoginForm>
-      <TextField id="outlined-basic-email" label="Email" variant="outlined" type="email" name="email"  />
+        <TextField
+          id="outlined-basic-email"
+          label="Email"
+          variant="outlined"
+          type="email"
+          name="email"
+        />
       </LableLoginForm>
       <LableLoginForm>
-      <TextField id="outlined-basic-password" label="Password" variant="outlined" type="password" name="password"  />
+        <TextField
+          id="outlined-basic-password"
+          label="Password"
+          variant="outlined"
+          type="password"
+          name="password"
+        />
       </LableLoginForm>
-      <Button type="submit" variant="outlined">Log In</Button>
+      <Button type="submit" variant="outlined">
+        Log In
+      </Button>
     </form>
   );
 };

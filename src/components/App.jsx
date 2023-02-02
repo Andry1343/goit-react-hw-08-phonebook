@@ -3,7 +3,6 @@ import { useDispatch } from 'react-redux';
 
 import { Container } from './App.style';
 
-
 import { Routes, Route } from 'react-router-dom';
 import { Layout } from './Layout.js';
 import HomePage from './pages/Home.js';
@@ -14,8 +13,6 @@ import { PrivateRoute } from './PrivateRoute.js';
 import { ContactsPage } from './pages/ContactPage.js';
 import { useAuth } from 'hooks/useAuth';
 import { refreshUser } from './redux/operations';
-
-
 
 export const App = () => {
   const dispatch = useDispatch();

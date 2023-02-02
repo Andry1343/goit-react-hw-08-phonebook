@@ -6,13 +6,9 @@ export const Navigation = () => {
 
   return (
     <nav>
-      <NavigationNavlink  to="/">
-       Home
-      </NavigationNavlink>
+      <NavigationNavlink to="/">Home</NavigationNavlink>
       {isLoggedIn && (
-        <NavigationNavlink to="/contacts">
-       Contacs
-        </NavigationNavlink>
+        <NavigationNavlink to="/contacts">Contacs</NavigationNavlink>
       )}
     </nav>
   );

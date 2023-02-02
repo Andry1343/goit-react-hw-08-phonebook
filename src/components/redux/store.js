@@ -10,8 +10,8 @@ import {
   REGISTER,
 } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
-import { authReducer } from '../redux/authSlice'
-import { filterReducer } from "./filterSlice";
+import { authReducer } from '../redux/authSlice';
+import { filterReducer } from './filterSlice';
 import { contactReducer } from './contactsSlice';
 
 const middleware = [
@@ -37,7 +37,6 @@ export const store = configureStore({
   },
 
   middleware,
-
 });
 
 export const persistor = persistStore(store);

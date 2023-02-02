@@ -39,11 +39,7 @@ export const deleteContact = createAsyncThunk(
   }
 );
 
-
-
 ///Работа с Авторизацией и Регистрацией////////
-
-
 
 // Utility to add JWT
 const setAuthHeader = token => {

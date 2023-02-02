@@ -8,7 +8,6 @@ import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import { LableForm } from './Form.style';
 
-
 export function ContactForm() {
   const dispatch = useDispatch();
   const [name, setName] = useState('');
@@ -52,63 +51,40 @@ export function ContactForm() {
   }
 
   return (
-    
     <form onSubmit={handleSubmit}>
-      
       <LableForm>
-      <TextField id="outlined-basic" label="Name" variant="outlined" 
-        value={name}
-        onChange={handleChange}
-        type="text"
-        name="name"
-        pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
-        title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
-        required
-         />
+        <TextField
+          id="outlined-basic"
+          label="Name"
+          variant="outlined"
+          value={name}
+          onChange={handleChange}
+          type="text"
+          name="name"
+          pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
+          title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
+          required
+        />
       </LableForm>
-        
-    
-        <LableForm>
-        <TextField id="outlined-basic" label="Number" variant="outlined" 
-        value={number}
-        onChange={handleChange}
-        type="tel"
-        name="number"
-        pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
-        title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
-        required
-         />
-      
-        </LableForm>
-        <Button type="submit" variant="outlined">Add contact</Button>
+
+      <LableForm>
+        <TextField
+          id="outlined-basic"
+          label="Number"
+          variant="outlined"
+          value={number}
+          onChange={handleChange}
+          type="tel"
+          name="number"
+          pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
+          title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
+          required
+        />
+      </LableForm>
+      <Button type="submit" variant="outlined">
+        Add contact
+      </Button>
       <ToastContainer />
     </form>
   );
 }
-
-/* <form onSubmit={handleSubmit}>
-      <label className={style.label}>
-        <TextField id="outlined-basic" label="Name" variant="outlined" 
-        value={name}
-        onChange={handleChange}
-        type="text"
-        name="name"
-        pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
-        title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
-        required
-         />
-      </label>
-      <label className={style.label}>
-        <TextField id="outlined-basic" label="Number" variant="outlined" 
-        value={number}
-        onChange={handleChange}
-        type="tel"
-        name="number"
-        pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
-        title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
-        required
-         />
-      </label>
-      <Button type="submit" variant="outlined">Add contact</Button>
-      <ToastContainer />
-    </form> */

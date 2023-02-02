@@ -4,7 +4,6 @@ import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import { LableRegisterForm } from './Register.style.form';
 
-
 export const RegisterForm = () => {
   const dispatch = useDispatch();
 
@@ -24,30 +23,35 @@ export const RegisterForm = () => {
   return (
     <form onSubmit={handleSubmit} autoComplete="off">
       <LableRegisterForm>
-      <TextField id="outlined-basic-name" label="Username" variant="outlined" type="text" name="name"  />
+        <TextField
+          id="outlined-basic-name"
+          label="Username"
+          variant="outlined"
+          type="text"
+          name="name"
+        />
       </LableRegisterForm>
       <LableRegisterForm>
-      <TextField id="outlined-basic-email" label="Email" variant="outlined" type="email" name="email"  />
+        <TextField
+          id="outlined-basic-email"
+          label="Email"
+          variant="outlined"
+          type="email"
+          name="email"
+        />
       </LableRegisterForm>
       <LableRegisterForm>
-      <TextField id="outlined-basic-password" label="Password" variant="outlined" type="password" name="password"  />
+        <TextField
+          id="outlined-basic-password"
+          label="Password"
+          variant="outlined"
+          type="password"
+          name="password"
+        />
       </LableRegisterForm>
-      <Button type="submit" variant="outlined">Register</Button>
+      <Button type="submit" variant="outlined">
+        Register
+      </Button>
     </form>
-
   );
 };
-
-
-/* <form onSubmit={handleSubmit} autoComplete="off">
-      <label className={style.label}>
-        <TextField id="outlined-basic-name" label="Username" variant="outlined" type="text" name="name"  />
-      </label>
-      <label className={style.label}>
-        <TextField id="outlined-basic-email" label="Email" variant="outlined" type="email" name="email"  />
-      </label>
-      <label className={style.label}>
-        <TextField id="outlined-basic-password" label="Password" variant="outlined" type="password" name="password"  />
-      </label>
-      <Button type="submit" variant="outlined">Register</Button>
-    </form> */
