@@ -10,6 +10,6 @@ export const StyleNavLink = styled(NavLink)`
 
   &.active {
     color: white;
-    background-color: orangered;
+    background-color: #1976D2;
   }
 `;
